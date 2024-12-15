@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["app", "entity", "migration"]
+
+[workspace.dependencies]
+sea-orm = { version = "1.1.2", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+    "macros",
+] }
+tokio = { version = "1.42.0", features = ["full"] }
